@@ -1,0 +1,303 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[a4paper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{xcolor}
+\definecolor{PrimaryColor}{HTML}{004C8A}
+\definecolor{SecondaryColor}{HTML}{333333}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage[utf8]{inputenc}
+\usepackage[T5]{fontenc}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+%----------FONT OPTIONS----------
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\raggedright\large\bfseries\color{PrimaryColor}
+}{}{0em}{}[\color{PrimaryColor}\titlerule \vspace{-2pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-3pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-9pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-9pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-8pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%-----------HEADER-----------
+\begin{center}
+    {\Huge \textbf{\textcolor{PrimaryColor}{NGUYỄN ĐĂNG PHÚC LỢI}}} \\ \vspace{5pt}
+    \small \textbf{\textcolor{SecondaryColor}{BACKEND SOFTWARE ENGINEER}} $|$ \small Date of birth: 11/09/1995 \\ \vspace{4pt}
+    \small \raisebox{-0.1\height}{\textcolor{PrimaryColor}{\faPhone}}\ \href{tel:0962948982}{0962948982} ~
+    \href{mailto:phucloi.dev@gmail.com}{\raisebox{-0.2\height}{\textcolor{PrimaryColor}{\faEnvelope}}\ phucloi.dev@gmail.com} ~
+    \href{https://github.com/rubyhcm}{\raisebox{-0.2\height}{\textcolor{PrimaryColor}{\faGithub}}\ github.com/rubyhcm} ~
+    \href{https://phucloi.dev/}{\raisebox{-0.2\height}{\textcolor{PrimaryColor}{\faGlobe}}\ phucloi.dev} ~
+    \href{https://www.linkedin.com/in/devruby/}{\raisebox{-0.2\height}{\textcolor{PrimaryColor}{\faLinkedin}}\ linkedin.com/in/devruby}
+\end{center}
+
+%-----------PROFESSIONAL SUMMARY-----------
+\section{Professional Summary}
+\small{Backend Software Engineer with 6+ years building scalable \textbf{gRPC-first microservices} and RESTful APIs using \textbf{Ruby on Rails} and \textbf{Go}. Experienced in \textbf{Clean Architecture}, \textbf{CQRS} and event-driven architectures — across international teams in Vietnam, Japan, and globally.}
+\vspace{-5pt}
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Primary Languages}{: Ruby, Go} \\ \vspace{1pt}
+     \textbf{Frameworks}{: Ruby on Rails, gRPC, Fiber, Chi} \\ \vspace{1pt}
+     \textbf{Databases}{: PostgreSQL, MySQL, MongoDB, Redis} \\ \vspace{1pt}
+     \textbf{Message Queues \& Async}{: Kafka, RabbitMQ, Sidekiq, Redis Pub/Sub, WebSocket} \\ \vspace{1pt}
+     \textbf{Cloud \& DevOps}{: AWS (S3, EC2), GCP (Storage, VM), Azure, Docker} \\ \vspace{1pt}
+     \textbf{CI/CD \& Observability}{: GitHub Actions, GitLab CI/CD, CircleCI, ArgoCD, Azure DevOps, Sentry, Grafana, Observe} \\ \vspace{1pt}
+     \textbf{Testing}{: RSpec, Testify} \\ \vspace{1pt}
+     \textbf{Auth \& Security}{: Ory, eKYC, JWT, SSO (Microsoft Teams), OAuth2/OIDC} \\ \vspace{1pt}
+     \textbf{Tools}{: GitHub, GitLab, Jira, Slack, Linux, MacOS} \\ \vspace{1pt}
+     \textbf{AI Tools}{: Claude, GitHub Copilot} \\ \vspace{1pt}
+     \textbf{Languages}{: Vietnamese (Native), English (B2)}
+    }}
+ \end{itemize}
+\vspace{-5pt}
+
+%-----------WORK EXPERIENCE-----------
+\section{Work Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {TTC AGRIS}{Oct 2025 -- Present}
+      {Software Engineer $|$ Go (gRPC), Fiber, PostgreSQL, Redis, RabbitMQ, ArgoCD, Azure DevOps}{}
+      \resumeItemListStart
+        \resumeItem{Architected and developed backend microservices with \textbf{Go} and \textbf{gRPC}; designed and owned 3 core services (authentication, cronjob, partner gateway) serving \textbf{10,000+ users}.}
+        \resumeItem{Deployed services via \textbf{ArgoCD} with GitOps workflows on \textbf{Azure DevOps}; managed PostgreSQL, Redis, S3, and RabbitMQ integrations.}
+      \resumeItemListEnd
+      \vspace{7pt}
+
+    \resumeSubheading
+      {VIETNAM SILICON}{Mar 2025 -- Oct 2025}
+      {Software Engineer $|$ Go, PostgreSQL, Redis, S3, Docker, Grafana, Microservices}{}
+      \resumeItemListStart
+        \resumeItem{Architected microservices using \textbf{Go} and \textbf{PostgreSQL}, designed database schemas, and built RESTful APIs in a globally distributed team.}
+        \resumeItem{Authored Technical Design Documents, conducted code reviews, and maintained production services with reliable deployment practices.}
+      \resumeItemListEnd
+      \vspace{7pt}
+
+    \resumeSubheading
+      {ICD VIETNAM}{Sep 2023 -- Mar 2025}
+      {Software Engineer $|$ Ruby on Rails, Go, MySQL, Redis, Sidekiq, RabbitMQ, GCP, CircleCI}{}
+      \resumeItemListStart
+        \resumeItem{Engineered features for Japanese enterprise clients using \textbf{Ruby on Rails}, \textbf{Go}, and \textbf{Vue.js}; designed MySQL schemas and integrated async job processing with Sidekiq and RabbitMQ.}
+        \resumeItem{Configured \textbf{CircleCI} pipelines, monitored production with Observe and Sentry, and led code reviews across cross-timezone teams.}
+      \resumeItemListEnd
+      \vspace{7pt}
+
+    \resumeSubheading
+      {IPFS}{Feb 2021 -- Sep 2023}
+      {Back-end Developer $|$ Ruby on Rails, PostgreSQL, Kafka, Redis, Sidekiq, WebSocket, Docker}{}
+      \resumeItemListStart
+        \resumeItem{Built and maintained \textbf{microservices} with Ruby on Rails, Kafka, and WebSocket; designed multi-tenancy isolation strategies via API gateway.}
+        \resumeItem{Managed async job processing with Sidekiq and monitored production reliability using Sentry.}
+      \resumeItemListEnd
+      \vspace{7pt}
+
+    \resumeSubheading
+      {FREELANCER --- REMOTE}{May 2020 -- Feb 2021}
+      {Back-end Developer $|$ Ruby on Rails, MySQL, PostgreSQL, GCP, GitHub Actions, CircleCI}{}
+      \resumeItemListStart
+        \resumeItem{Delivered end-to-end backend solutions — database design, RESTful API development, and cloud deployment on GCP — with automated CI/CD pipelines.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+\vspace{-10pt}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of Information Technology (VNU-HCM)}{2020 -- 2023}
+      {Bachelor of Information Technology -- GPA: 8.5/10}{}
+      \vspace{7pt}
+    \resumeSubheading
+      {HCM University of Technology and Education}{2013 -- 2017}
+      {Bachelor of Mechanical Engineering -- GPA: 7.0/10}{}
+  \resumeSubHeadingListEnd
+\vspace{-10pt}
+
+%-----------KEY PROJECTS-----------
+\section{Key Projects}
+    \vspace{-5pt}
+    \resumeSubHeadingListStart
+
+      \resumeProjectHeading
+          {\textbf{PARTNER GATEWAY SERVICE} (Dec 2025) $|$ \emph{Go (Fiber), PostgreSQL, RabbitMQ, gRPC Client} $|$ \emph{Solo}}{}
+          \resumeItemListStart
+            \resumeItem{Engineered an API gateway bridging external partner APIs with internal \textbf{gRPC microservices}, handling authentication, rate limiting, and request routing via \textbf{Fiber v2}.}
+            \resumeItem{Integrated \textbf{RabbitMQ} for event-driven workflows and gRPC clients to downstream services for inter-service communication.}
+          \resumeItemListEnd
+          \vspace{2pt}
+
+      \resumeProjectHeading
+          {\textbf{CRONJOB SERVICE} (Nov 2025) $|$ \emph{Go (gRPC), PostgreSQL, Redis, gocron v2, RabbitMQ} $|$ \emph{2 members}}{}
+          \resumeItemListStart
+            \resumeItem{Built a centralized cronjob management service with \textbf{gocron v2} and \textbf{Redis distributed locking}, triggering jobs via \textbf{gRPC} and \textbf{HTTP webhooks} with retry logic and execution history.}
+          \resumeItemListEnd
+          \vspace{2pt}
+
+      \resumeProjectHeading
+          {\textbf{CENTRE AUTHEN SERVICE} (Oct 2025) $|$ \emph{Go (gRPC), PostgreSQL, Redis, JWT, eKYC, SSO} $|$ \emph{Solo}}{}
+          \resumeItemListStart
+            \resumeItem{Architected a centralized authentication and authorization service serving \textbf{10,000+ users}.}
+            \resumeItem{Integrated \textbf{VNPT eKYC} for identity verification and \textbf{SSO with Microsoft Teams} (Azure OAuth).}
+          \resumeItemListEnd
+          \vspace{2pt}
+
+      \resumeProjectHeading
+          {\textbf{NOTIFICATION SERVICE} (Mar 2025) $|$ \emph{Go (Chi), PostgreSQL, Redis, Kafka, Line, Twilio, SendGrid} $|$ \emph{2 members}}{}
+          \resumeItemListStart
+            \resumeItem{Engineered an event-driven notification platform supporting email, SMS, Line, SSE, and FCM delivery via \textbf{Kafka}-based async processing.}
+            \resumeItem{Designed and implemented RESTful APIs with both scheduled and on-demand notification triggering.}
+          \resumeItemListEnd
+          \vspace{2pt}
+
+      \resumeProjectHeading
+          {\textbf{IAM SERVICE} (Mar 2025) $|$ \emph{Go (Chi), Ory Helm Charts, PostgreSQL, Kubernetes} $|$ \emph{2 members}}{}
+          \resumeItemListStart
+            \resumeItem{Implemented centralized authentication and authorization using the \textbf{Ory} stack.}
+            \resumeItem{Deployed and configured Ory components via Helm charts in a Kubernetes environment.}
+          \resumeItemListEnd
+          \vspace{2pt}
+
+      \resumeProjectHeading
+          {\textbf{HUMAN RESOURCE MANAGEMENT} (Sep 2024) $|$ \emph{Go (Fiber), MySQL, Testify, GitHub, Jira} $|$ \emph{4 members}}{}
+          \resumeItemListStart
+            \resumeItem{Created a company-wide HR system for managing employee records, attendance, and operations.}
+            \resumeItem{Designed MySQL schemas, implemented RESTful APIs, and wrote unit tests with \textbf{Testify}.}
+          \resumeItemListEnd
+          \vspace{2pt}
+
+      \resumeProjectHeading
+          {\textbf{MEDIA SERVICE} (May 2024) $|$ \emph{Ruby on Rails, MySQL, Redis, Sidekiq, Google Cloud Storage, Observe} $|$ \emph{3 members}}{}
+          \resumeItemListStart
+            \resumeItem{Developed a file management service enabling customers to upload and download images via \textbf{Google Cloud Storage} integration.}
+            \resumeItem{Designed database schemas, implemented APIs, and monitored production with Observe.}
+          \resumeItemListEnd
+          \vspace{2pt}
+
+      \resumeProjectHeading
+          {\textbf{GARMENT DESIGN MANAGEMENT} (Dec 2023) $|$ \emph{Ruby on Rails, MySQL, Sidekiq, Redis, Sentry, Vue.js} $|$ \emph{4 members}}{}
+          \resumeItemListStart
+            \resumeItem{Developed a production management platform for garment manufacturing oversight with \textbf{Vue.js} front-end support.}
+            \resumeItem{Designed relational schemas, implemented APIs, and configured async job processing with Sidekiq.}
+          \resumeItemListEnd
+          \vspace{2pt}
+
+      \resumeProjectHeading
+          {\textbf{CHAT SUPPORT SERVICE} (Feb 2023) $|$ \emph{Ruby on Rails, MongoDB, WebSocket, GitLab} $|$ \emph{3 members}}{}
+          \resumeItemListStart
+            \resumeItem{Implemented a real-time chat system enabling customers to interact with support assistants via \textbf{WebSocket}.}
+            \resumeItem{Developed APIs and wrote unit tests.}
+          \resumeItemListEnd
+          \vspace{2pt}
+
+      \resumeProjectHeading
+          {\textbf{SOCIAL PROJECT} (Apr 2022) $|$ \emph{Ruby on Rails, MongoDB, Sidekiq, Redis, Sentry, GitLab} $|$ \emph{3 members}}{}
+          \resumeItemListStart
+            \resumeItem{Developed a social platform allowing users to create posts, write reviews, and react to content.}
+            \resumeItem{Built APIs, managed async jobs with Sidekiq, and monitored reliability using Sentry.}
+          \resumeItemListEnd
+          \vspace{2pt}
+
+      \resumeProjectHeading
+          {\textbf{MY BLOG} (Mar 2021) $|$ \emph{\href{https://phucloi.dev/}{phucloi.dev}} $|$ \emph{Ruby on Rails MVC, MySQL, Docker, GitHub, CircleCI} $|$ \emph{Solo}}{}
+          \resumeItemListStart
+            \resumeItem{Designed, developed, and deployed a personal technical blog with automated \textbf{CI/CD} pipeline from scratch.}
+            \resumeItem{Managed full architecture, infrastructure, and ongoing maintenance as the sole developer.}
+          \resumeItemListEnd
+
+    \resumeSubHeadingListEnd
+
+\end{document}
