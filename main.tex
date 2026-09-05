@@ -1,7 +1,7 @@
 \documentclass[a4paper,11pt]{article}
 
 \usepackage{latexsym}
-\usepackage[empty]{fullpage}
+\usepackage[margin=0.5in]{geometry}
 \usepackage{titlesec}
 \usepackage{marvosym}
 \usepackage[usenames,dvipsnames]{xcolor}
@@ -15,15 +15,23 @@
 \usepackage{tabularx}
 \usepackage{fontawesome5}
 \usepackage{multicol}
-\usepackage[utf8]{inputenc}
-\usepackage[T5]{fontenc}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[utf8]{inputenc}
+  \usepackage[T5]{fontenc}
+  \usepackage{helvet}
+  \renewcommand{\familydefault}{\sfdefault}
+\else
+  \usepackage{fontspec}
+  \setmainfont{Helvetica}
+  \setsansfont{Helvetica}
+  \renewcommand{\familydefault}{\sfdefault}
+\fi
 \setlength{\multicolsep}{-3.0pt}
 \setlength{\columnsep}{-1pt}
-\input{glyphtounicode}
-
-%----------FONT OPTIONS----------
-\usepackage{helvet}
-\renewcommand{\familydefault}{\sfdefault}
+\ifPDFTeX
+  \input{glyphtounicode}
+\fi
 
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
@@ -31,12 +39,7 @@
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
-% Adjust margins
-\addtolength{\oddsidemargin}{-0.6in}
-\addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1.19in}
-\addtolength{\topmargin}{-.7in}
-\addtolength{\textheight}{1.4in}
+% Margins adjusted via geometry package
 
 \urlstyle{same}
 
@@ -50,7 +53,9 @@
 }{}{0em}{}[\color{PrimaryColor}\titlerule \vspace{-2pt}]
 
 % Ensure that generate pdf is machine readable/ATS parsable
-\pdfgentounicode=1
+\ifpdftex
+  \pdfgentounicode=1
+\fi
 
 %-------------------------
 % Custom commands
@@ -133,7 +138,7 @@
      \textbf{Testing}{: RSpec, Testify} \\ \vspace{1pt}
      \textbf{Auth \& Security}{: Ory, eKYC, JWT, SSO (Microsoft Teams), OAuth2/OIDC} \\ \vspace{1pt}
      \textbf{Tools}{: GitHub, GitLab, Jira, Slack, Linux, MacOS} \\ \vspace{1pt}
-     \textbf{AI Tools}{: Claude, GitHub Copilot} \\ \vspace{1pt}
+     \textbf{AI Tools}{: Claude Code, GitHub Copilot} \\ \vspace{1pt}
      \textbf{Languages}{: Vietnamese (Native), English (B2)}
     }}
  \end{itemize}
@@ -148,6 +153,7 @@
       \resumeItemListStart
         \resumeItem{Architected and developed backend microservices with \textbf{Go} and \textbf{gRPC}; designed and owned 3 core services (authentication, cronjob, partner gateway) serving \textbf{10,000+ users}.}
         \resumeItem{Deployed services via \textbf{ArgoCD} with GitOps workflows on \textbf{Azure DevOps}; managed PostgreSQL, Redis, S3, and RabbitMQ integrations.}
+        \resumeItem{Leveraged \textbf{AI agents} to accelerate daily development tasks, including code generation, debugging, and complex problem-solving.}
       \resumeItemListEnd
       \vspace{7pt}
 
@@ -157,6 +163,7 @@
       \resumeItemListStart
         \resumeItem{Architected microservices using \textbf{Go} and \textbf{PostgreSQL}, designed database schemas, and built RESTful APIs in a globally distributed team.}
         \resumeItem{Authored Technical Design Documents, conducted code reviews, and maintained production services with reliable deployment practices.}
+        \resumeItem{Utilized \textbf{AI agents} to streamline the development process, accelerating task completion and technical documentation.}
       \resumeItemListEnd
       \vspace{7pt}
 
