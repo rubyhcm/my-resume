@@ -1,1 +1,4 @@
-- Communicates in Vietnamese. Confidence: 0.7
+- Communicates in Vietnamese. Confidence: 0.8
+- Prefers resume job-description content without bold (\textbf) emphasis on keywords. Confidence: 0.8
+- Prefers lists without the Oxford/serial comma (e.g. "Grafana, Observe, Sentry"). Confidence: 0.6
+- Cares about clean visual layout and alignment in documents, flagging subtle issues like misaligned date columns or overfull lines. Confidence: 0.7
