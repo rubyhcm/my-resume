@@ -1,0 +1,1 @@
+- Communicates in Vietnamese. Confidence: 0.7

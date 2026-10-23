@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Shell(pdflatex:*)",
+      "Shell(command -v xelatex lualatex latexmk tectonic pdflatex 2>/dev/null; echo \"---\"; which xelatex lualatex latexmk tectonic pdflatex 2>/dev/null)",
+      "Shell(tectonic:*)"
+    ],
+    "deny": [],
+    "defaultMode": "default"
+  }
+}
