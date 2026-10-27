@@ -3,7 +3,9 @@
     "allow": [
       "Shell(pdflatex:*)",
       "Shell(command -v xelatex lualatex latexmk tectonic pdflatex 2>/dev/null; echo \"---\"; which xelatex lualatex latexmk tectonic pdflatex 2>/dev/null)",
-      "Shell(tectonic:*)"
+      "Shell(tectonic:*)",
+      "Shell(which xelatex pdflatex latexmk 2>/dev/null; echo \"---\"; ls -la main.tex)",
+      "Shell(which tectonic pdflatex lualatex xelatex latex 2>/dev/null; echo \"---PATH---\"; echo $PATH; echo \"---mactex---\"; ls /Library/TeX/texbin 2>/dev/null | head -30)"
     ],
     "deny": [],
     "defaultMode": "default"

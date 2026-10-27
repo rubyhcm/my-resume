@@ -1,0 +1,252 @@
+\documentclass[a4paper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{xcolor}
+\definecolor{PrimaryColor}{HTML}{004C8A}
+\definecolor{SecondaryColor}{HTML}{333333}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[utf8]{inputenc}
+  \usepackage[T5]{fontenc}
+  \usepackage{helvet}
+  \renewcommand{\familydefault}{\sfdefault}
+\else
+  \usepackage{fontspec}
+  \setmainfont{Helvetica}
+  \setsansfont{Helvetica}
+  \renewcommand{\familydefault}{\sfdefault}
+\fi
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\ifPDFTeX
+  \input{glyphtounicode}
+\fi
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Margins adjusted via geometry package
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\raggedright\large\bfseries\color{PrimaryColor}
+}{}{0em}{}[\color{PrimaryColor}\titlerule \vspace{-2pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\ifpdftex
+  \pdfgentounicode=1
+\fi
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-3pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-9pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-9pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-8pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%-----------HEADER-----------
+\begin{center}
+    {\Huge \textbf{\textcolor{PrimaryColor}{NGUYỄN ĐĂNG PHÚC LỢI}}} \\ \vspace{5pt}
+    \small \textbf{\textcolor{SecondaryColor}{BACKEND SOFTWARE ENGINEER}} $|$ \small Date of birth: 11/09/1995 \\ \vspace{4pt}
+    \small \raisebox{-0.1\height}{\textcolor{PrimaryColor}{\faPhone}}\ \href{tel:0962948982}{0962 948 982} ~
+    \href{mailto:phucloi.dev@gmail.com}{\raisebox{-0.2\height}{\textcolor{PrimaryColor}{\faEnvelope}}\ phucloi.dev@gmail.com} ~
+    \href{https://github.com/rubyhcm}{\raisebox{-0.2\height}{\textcolor{PrimaryColor}{\faGithub}}\ github.com/rubyhcm} ~
+    \href{https://phucloi.dev/}{\raisebox{-0.2\height}{\textcolor{PrimaryColor}{\faGlobe}}\ phucloi.dev} ~
+    \href{https://www.linkedin.com/in/devruby/}{\raisebox{-0.2\height}{\textcolor{PrimaryColor}{\faLinkedin}}\ linkedin.com/in/devruby}
+\end{center}
+
+%-----------PROFESSIONAL SUMMARY-----------
+\section{Professional Summary}
+\small{Backend Software Engineer with 6+ years building high-performance, scalable microservices and RESTful APIs using Ruby on Rails and Go (gRPC, Fiber, Chi). Proven track record in distributed systems, high-concurrency architectures, Clean Architecture, CQRS, and event-driven design — delivering fault-tolerant solutions across international teams in Vietnam, Japan, and globally.}
+\vspace{-5pt}
+
+%-----------TECHNICAL SKILLS-----------
+\section{Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Ruby (Rails), Go (gRPC, REST API, WebSocket)} \\ \vspace{1pt}
+     \textbf{Architecture}{: Microservices, Clean Architecture, CQRS, Event-Driven, DDD, Saga Pattern} \\ \vspace{1pt}
+     \textbf{Domain}{: E-commerce, Fintech, HR, Manufacturing, Agriculture} \\ \vspace{1pt}
+     \textbf{Data \& Messaging}{: PostgreSQL, Redis, Kafka, RabbitMQ} \\ \vspace{1pt}
+     \textbf{AI Tools}{: Claude, GitHub Copilot, Kiro} \\ \vspace{1pt}
+     \textbf{Spoken Languages}{: Vietnamese (Native), English (B2)}
+    }}
+ \end{itemize}
+\vspace{-5pt}
+
+%-----------WORK EXPERIENCE-----------
+\section{Work Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {TTC AGRIS}{Oct 2025 -- Present}
+      {Software Engineer $|$ Go (gRPC, Fiber), PostgreSQL, Redis, RabbitMQ, Grafana}{}
+      \resumeItemListStart
+        \resumeItem{Architected and developed high-concurrency backend microservices with Go and gRPC; designed and owned 3 core services (authentication, cronjob, partner gateway) serving 10,000+ concurrent users.}
+        \resumeItem{Deployed services via ArgoCD with GitOps workflows on Azure DevOps; managed PostgreSQL, Redis, S3, and RabbitMQ integrations.}
+      \resumeItemListEnd
+      \vspace{7pt}
+
+    \resumeSubheading
+      {VIETNAM SILICON}{Mar 2025 -- Oct 2025}
+      {Software Engineer $|$ Go (Chi), PostgreSQL, Redis, Grafana}{}
+      \resumeItemListStart
+        \resumeItem{Architected high-performance microservices using Go and PostgreSQL, designed optimized database schemas, and built scalable RESTful APIs in a globally distributed team.}
+        \resumeItem{Authored Technical Design Documents, conducted code reviews, and maintained production services with reliable deployment practices.}
+      \resumeItemListEnd
+      \vspace{7pt}
+
+    \resumeSubheading
+      {ICD VIETNAM}{Sep 2023 -- Mar 2025}
+      {Software Engineer $|$ Go, Ruby on Rails, Vue.js, PostgreSQL, MySQL, RabbitMQ, Kafka}{}
+      \resumeItemListStart
+        \resumeItem{Engineered features for Japanese enterprise clients using Go, Ruby on Rails, and Vue.js; designed PostgreSQL and MySQL schemas and integrated async job processing with Sidekiq and RabbitMQ.}
+        \resumeItem{Managed deployments with Docker and CircleCI pipelines, monitored production with Grafana, Observe, Sentry and led code reviews across cross-timezone teams.}
+      \resumeItemListEnd
+      \vspace{7pt}
+
+    \resumeSubheading
+      {IPFS}{Feb 2021 -- Sep 2023}
+      {Software Engineer $|$ Ruby on Rails, PostgreSQL, Kafka, Redis, Sidekiq, WebSocket, Docker}{}
+      \resumeItemListStart
+        \resumeItem{Built and maintained scalable microservices with Ruby on Rails, Kafka, and WebSocket; designed multi-tenancy isolation strategies via API gateway for high-throughput workloads.}
+        \resumeItem{Managed concurrent async job processing with Sidekiq and ensured fault-tolerant production reliability using Sentry.}
+      \resumeItemListEnd
+      \vspace{7pt}
+
+    \resumeSubheading
+      {FREELANCER --- REMOTE}{May 2020 -- Feb 2021}
+      {Software Engineer $|$ Ruby on Rails, MySQL, PostgreSQL, GCP, GitHub Actions, CircleCI}{}
+      \resumeItemListStart
+        \resumeItem{Delivered end-to-end backend solutions — database design, RESTful API development, and cloud deployment on GCP — with automated CI/CD pipelines.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+\vspace{-10pt}
+
+%-----------KEY PROJECTS-----------
+\section{Key Projects}
+    \vspace{-5pt}
+    \resumeSubHeadingListStart
+
+      \resumeProjectHeading
+          {\textbf{PARTNER GATEWAY SERVICE} (Dec 2025) $|$ \emph{Go (Fiber), PostgreSQL, RabbitMQ} $|$ \emph{Solo}}{}
+          \resumeItemListStart
+            \resumeItem{Engineered a high-throughput API gateway bridging external partner APIs with internal \textbf{gRPC microservices}, handling authentication, rate limiting, and request routing via \textbf{Fiber v2}.}
+            \resumeItem{Integrated \textbf{RabbitMQ} for event-driven workflows and gRPC clients to downstream services for inter-service communication.}
+          \resumeItemListEnd
+          \vspace{2pt}
+
+      \resumeProjectHeading
+          {\textbf{CRONJOB SERVICE} (Nov 2025) $|$ \emph{Go (gRPC), PostgreSQL, Redis, RabbitMQ} $|$ \emph{2 members}}{}
+          \resumeItemListStart
+            \resumeItem{Built a fault-tolerant centralized cronjob management service with \textbf{gocron v2} and \textbf{Redis distributed locking}, triggering jobs via \textbf{gRPC} and \textbf{HTTP webhooks} with retry logic and execution history.}
+          \resumeItemListEnd
+          \vspace{2pt}
+
+      \resumeProjectHeading
+          {\textbf{CENTRE AUTHEN SERVICE} (Oct 2025) $|$ \emph{Go (gRPC), PostgreSQL, Redis, JWT, eKYC, SSO} $|$ \emph{Solo}}{}
+          \resumeItemListStart
+            \resumeItem{Architected a centralized authentication and authorization service serving \textbf{10,000+ users}.}
+            \resumeItem{Integrated \textbf{VNPT eKYC} for identity verification and \textbf{SSO with Microsoft Teams} (Azure OAuth).}
+          \resumeItemListEnd
+          \vspace{2pt}
+
+      \resumeProjectHeading
+          {\textbf{NOTIFICATION SERVICE} (Mar 2025) $|$ \emph{Go (Chi), PostgreSQL, Redis, Kafka, Line, Twilio, SendGrid} $|$ \emph{2 members}}{}
+          \resumeItemListStart
+            \resumeItem{Engineered a high-throughput, event-driven notification platform supporting email, SMS, Line, SSE, and FCM delivery via \textbf{Kafka}-based async processing.}
+            \resumeItem{Designed and implemented scalable RESTful APIs with both scheduled and on-demand notification triggering.}
+          \resumeItemListEnd
+          \vspace{2pt}
+
+      \resumeProjectHeading
+          {\textbf{ECOMMERCE SERVICE} (Jan 2024) $|$ \emph{Go (gRPC), PostgreSQL, Redis, Kafka} $|$ \emph{5 members}}{}
+          \resumeItemListStart
+            \resumeItem{Developed a high-performance B2B e-commerce platform for agricultural products (fertilizers, machinery) using \textbf{Go} and \textbf{gRPC} microservices with high-concurrency order processing.}
+            \resumeItem{Designed PostgreSQL schemas for product catalog, order management, and inventory tracking; integrated \textbf{Kafka} for async order processing workflows.}
+          \resumeItemListEnd
+          \vspace{2pt}
+
+      \resumeProjectHeading
+          {\textbf{TRADING SYSTEM} (May 2021) $|$ \emph{Ruby on Rails, PostgreSQL, Redis, Sidekiq, WebSocket, Docker} $|$ \emph{8 members}}{}
+          \resumeItemListStart
+            \resumeItem{Built a high-concurrency, real-time trading platform with \textbf{Ruby on Rails} and \textbf{WebSocket}, supporting live order matching, portfolio tracking, and transaction history.}
+            \resumeItem{Designed relational schemas for trade orders and user portfolios; implemented async job processing with \textbf{Sidekiq} for settlement and notifications.}
+          \resumeItemListEnd
+
+    \resumeSubHeadingListEnd
+\vspace{-10pt}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of Information Technology (VNU-HCM)}{2020 -- 2023}
+      {Bachelor of Information Technology -- GPA: 8.5/10}{}
+  \resumeSubHeadingListEnd
+
+\end{document}
